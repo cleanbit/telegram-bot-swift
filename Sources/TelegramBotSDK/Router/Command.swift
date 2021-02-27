@@ -82,7 +82,7 @@ public class Command {
             
             if options.contains(.exactMatch) {
                 
-                guard nameWord.hasPrefix(word, caseInsensitive: !caseSensitive) else {
+                guard word.hasPrefix(nameWord, caseInsensitive: !caseSensitive) else {
                     return nil
                 }
                 
@@ -101,7 +101,7 @@ public class Command {
                     processedWord = word
                 }
                 
-                guard nameWord.hasPrefix(processedWord, caseInsensitive: !caseSensitive) else {
+                guard processedWord.hasPrefix(nameWord, caseInsensitive: !caseSensitive) else {
                     return nil
                 }
                 
